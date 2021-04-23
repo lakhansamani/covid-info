@@ -24,7 +24,7 @@ export default function Home() {
             className="p-6 m-3 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
             <h3 className="text-2xl font-bold">Vadodara &rarr;</h3>
-            <p className="mt-4 text-xl">Coming Soon</p>
+            <p className="mt-4 text-xl">Coming Soon!</p>
           </a>
 
           <a
