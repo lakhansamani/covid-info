@@ -38,9 +38,9 @@ export default function Home() {
       </main>
       <footer>
         <p className="text-gray-800 p-6">
-          We are actively Gathering information about COVID-19 hospitals and
+          We are actively gathering information about COVID-19 hospitals and
           services. Please contribute by sending any COVID-19 related
-          information on{' '}
+          information to{' '}
           <a href="mailto:lakhan.m.samani@gmail.com" className="text-blue-600">
             lakhan.m.samani@gmail.com
           </a>
