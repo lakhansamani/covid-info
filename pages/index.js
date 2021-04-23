@@ -13,7 +13,7 @@ export default function Home() {
           COVID-19 Information Center
         </h1>
 
-        <p className="mt-3 text-l text-gray-800">
+        <p className="mt-3 text-l text-gray-800 px-6">
           Get information about COVID-19 hospitals, beds, oxygen, medicine,
           doctors and other services
         </p>
