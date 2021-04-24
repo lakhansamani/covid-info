@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useContext } from 'react';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { MultiList } from './multiList';
@@ -48,6 +48,16 @@ export function SideMenu() {
       <p className="italic text-sm">More services, coming soon!</p>
       <br />
       <SingleList listData={['Yes', 'No']} label="Has Beds" filterKey="beds" />
+      <br />
+      <button
+        onClick={() => {
+          setIsSideMenuVisible(false);
+        }}
+        className="lg:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
+      >
+        <FontAwesomeIcon icon={faCheck} className="h-3 mr-2" />
+        Apply Filters
+      </button>
     </div>
   );
 }

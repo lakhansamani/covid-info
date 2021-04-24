@@ -44,6 +44,7 @@ export default function Home() {
                 className="text-gray-600 hover:text-blue-500 ml-2"
               >
                 {item.contact}
+                <span className="text-blue-500">&rarr;Call</span>
               </a>
             </div>
           )}
@@ -55,7 +56,8 @@ export default function Home() {
                 href={get(item, 'google_map', '/')}
                 target="_blank"
               >
-                {item.address}
+                {item.address}{' '}
+                <span className="text-blue-500">&rarr;Go to maps</span>
               </a>
             </div>
           )}
