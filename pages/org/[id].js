@@ -26,17 +26,16 @@ export default function Home() {
       <div className="lg:hidden px-10 text-center">
         <SiteHeading />
       </div>
-      <div className="flex justify-around lg:max-w-4xl mt-6 sm:w-full text-left border rounded-xl p-10 flex-col">
-        <h3 className="text-xl font-bold my-5">
-          <Link href="/">
-            <span className="mr-5 hover:text-blue-500 cursor-pointer">
-              &larr;
-            </span>
-          </Link>
-          {item.name}
-        </h3>
 
-        <div className="ml-10">
+      <div className="flex justify-around lg:max-w-4xl mt-6 mx-5  sm:w-full text-left border rounded-xl p-10 flex-col">
+        <Link href="/">
+          <span className="mr-5 hover:text-blue-500 cursor-pointer">
+            &larr; Back
+          </span>
+        </Link>
+        <h3 className="text-xl font-bold my-5">{item.name}</h3>
+
+        <div>
           {get(item, 'contact') && (
             <div className="my-1 flex items-center">
               <b>Phone: </b>
