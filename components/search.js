@@ -22,20 +22,20 @@ export const Search = () => {
       <input
         type="text"
         placeholder="Search name, address, phone number"
-        className="focus:outline-none focus:ring focus:border-blue-300 p-3 border border-gray-400 rounded w-full"
+        className="focus:outline-none focus:ring focus:border-blue-300 p-2 border border-gray-400 rounded w-full"
         value={currentSelectedFilters}
         onChange={handleChange}
       />
 
-      <div className="ml-5 lg:hidden">
-        <FontAwesomeIcon
-          icon={faFilter}
-          className="h-5"
-          onClick={() => {
-            setIsSideMenuVisible(true);
-          }}
-        />
-      </div>
+      <button
+        onClick={() => {
+          setIsSideMenuVisible(true);
+        }}
+        className="ml-5 lg:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
+      >
+        <FontAwesomeIcon icon={faFilter} className="h-3 mr-2" />
+        Filter
+      </button>
     </div>
   );
 };
