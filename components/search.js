@@ -13,7 +13,7 @@ export const Search = () => {
   const handleChange = (e) => {
     setFilters({
       ...filters,
-      search: e.target.value,
+      search: (e.target.value || '').trim(),
     });
   };
 

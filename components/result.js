@@ -1,15 +1,34 @@
-import { useRouter } from 'next/router';
+import { useContext, useRef } from 'react';
 import Link from 'next/link';
-import { data } from '../utils/data';
 import get from 'lodash/get';
 import { faMobileAlt, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Fuse from 'fuse.js';
+
+import { data } from '../utils/data';
+import { FilterContext } from '../context/filter';
+import { filter, hasFilter } from '../utils/filterData';
 
 export const Result = () => {
-  const router = useRouter();
+  const fuseInstance = useRef();
+  const { filters } = useContext(FilterContext);
+  fuseInstance.current = new Fuse(data, {
+    keys: ['name', 'contact', 'address', 'city', 'category'],
+  });
+
+  const filteredData = filter(data, filters, fuseInstance.current);
+
+  if (hasFilter(filters) && !filteredData.length) {
+    return (
+      <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full">
+        <h2>No Data Found</h2>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full">
-      {data.map((item) => (
+      {filteredData.map((item) => (
         <div
           className="p-6 m-3 text-left border w-96 rounded-xl cursor-pointer"
           key={item.id}
