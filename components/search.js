@@ -1,8 +1,13 @@
 import React, { useContext } from 'react';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { FilterContext } from '../context/filter';
+import { SideMenuContext } from '../context/sideMenu';
 
 export const Search = () => {
   const { filters, setFilters } = useContext(FilterContext);
+  const { setIsSideMenuVisible } = useContext(SideMenuContext);
   const currentSelectedFilters = filters.search;
 
   const handleChange = (e) => {
@@ -13,7 +18,7 @@ export const Search = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full">
+    <div className="flex flex-nowrap justify-center items-center lg:max-w-4xl md:max-w-2xl mt-6 sm:w-screen">
       <input
         type="text"
         placeholder="Search name, address, phone number"
@@ -21,6 +26,16 @@ export const Search = () => {
         value={currentSelectedFilters}
         onChange={handleChange}
       />
+
+      <div className="ml-5 lg:hidden">
+        <FontAwesomeIcon
+          icon={faFilter}
+          className="h-5"
+          onClick={() => {
+            setIsSideMenuVisible(true);
+          }}
+        />
+      </div>
     </div>
   );
 };

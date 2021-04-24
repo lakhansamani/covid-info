@@ -1,17 +1,37 @@
+import Link from 'next/link';
+import { useContext } from 'react';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { MultiList } from './multiList';
 import { SingleList } from './singleList';
 import { data } from '../utils/data';
 import uniq from 'lodash/uniq';
+import { SideMenuContext } from '../context/sideMenu';
+import { SiteHeading } from './siteHeading';
 
 export function SideMenu() {
+  const { isSideMenuVisible, setIsSideMenuVisible } = useContext(
+    SideMenuContext
+  );
+  if (!isSideMenuVisible) {
+    return null;
+  }
+
   return (
-    <div>
-      <h2 className="text-xl font-bold">COVID-19 </h2>
-      <h2 className="text-l font-semibold">Information Center</h2>
-      <p className="mt-3 text-l text-gray-800">
-        Get information about COVID-19 hospitals, beds, oxygen, medicine,
-        doctors and other services
-      </p>
+    <div className="fixed lg:w-80 bg-gray-200 p-10 h-screen z-50 isolate sm:w-screen">
+      <div className="lg:hidden flex justify-end mb-8">
+        <FontAwesomeIcon
+          icon={faTimes}
+          className="h-5 cursor-pointer"
+          onClick={() => {
+            setIsSideMenuVisible(false);
+          }}
+        />
+      </div>
+
+      <SiteHeading />
+
       <div className="my-5 border-solid border border-gray-700" />
       <MultiList
         listData={uniq(data.map((i) => i.city))}
