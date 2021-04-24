@@ -10,8 +10,10 @@ export default function Layout({ children }) {
       </Head>
       <div className="flex">
         <SideMenu />
-        <div className="flex flex-col items-center  h-screen py-5 relative lg:ml-80 w-full sm:w-screen">
+        <div className="flex flex-col items-center  min-h-screen py-5 relative lg:ml-80 w-full sm:w-screen">
           {children}
+          <div className="mb-40" />
+
           <footer className="fixed bottom-0 bg-gray-200  items-center justify-center text-center w-full">
             <p className="text-gray-800 p-3 text-xs">
               We are actively gathering information about COVID-19 hospitals and
