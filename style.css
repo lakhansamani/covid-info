@@ -1,0 +1,16 @@
+.beta {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  transform: rotate(315deg);
+  position: fixed;
+  left: -50px;
+  top: 5px;
+}
