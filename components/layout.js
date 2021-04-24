@@ -19,10 +19,10 @@ export default function Layout({ children }) {
               <br />
               Please contribute by sending any COVID-19 related information to{' '}
               <a
-                href="mailto:lakhan.m.samani@gmail.com"
+                href="mailto:covidinfocenter0@gmail.com@gmail.com"
                 className="text-blue-600"
               >
-                lakhan.m.samani@gmail.com
+                covidinfocenter0@gmail.com@gmail.com
               </a>
             </p>
           </footer>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { FilterContext } from '../context/filter';
 
-export const MultiList = ({ listData, label, filterKey }) => {
+export const MultiList = ({ listData, label, filterKey, layout }) => {
   const { filters, setFilters } = useContext(FilterContext);
   const currentSelectedFilters = filters[filterKey] || [];
 
@@ -19,7 +19,10 @@ export const MultiList = ({ listData, label, filterKey }) => {
     <div>
       <div className="font-semibold text-m">{label}</div>
       {listData.map((item) => (
-        <div className="block" key={item}>
+        <div
+          className={layout === 'horizontal' ? 'inline-block' : 'block'}
+          key={item}
+        >
           <label className="inline-flex items-center">
             <input
               type="checkbox"
