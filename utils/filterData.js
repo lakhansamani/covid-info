@@ -18,9 +18,10 @@ export const filter = (data, filters, fuseInstance) => {
 
   if (filters.beds.length) {
     res = res.filter((item) => {
-      if (filters.bed === 'Yes') return item.is_available === true;
+      if (filters.beds === 'Yes') return item.is_available === true;
       return item.is_available === false;
     });
+    console.log({ bed: res });
   }
 
   return res;
