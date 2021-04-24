@@ -27,7 +27,7 @@ export const Result = () => {
   }
 
   return (
-    <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full">
+    <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full mb-10">
       {filteredData.map((item) => (
         <div
           className="p-6 m-3 text-left border w-96 rounded-xl cursor-pointer"
