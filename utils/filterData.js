@@ -21,7 +21,6 @@ export const filter = (data, filters, fuseInstance) => {
       if (filters.beds === 'Yes') return item.is_available === true;
       return item.is_available === false;
     });
-    console.log({ bed: res });
   }
 
   return res;

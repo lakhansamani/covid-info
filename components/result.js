@@ -31,7 +31,7 @@ export const Result = () => {
     <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full mb-10 overscroll-auto">
       {filteredData.map((item) => (
         <div
-          className="p-6 m-3 text-left border w-96 rounded-xl cursor-pointer"
+          className="p-6 m-3 text-left border w-96 rounded-xl cursor-pointer relative pb-20 hover:shadow-md"
           key={item.id}
         >
           <ResultItem item={item} view={VIEW.RESULT} />

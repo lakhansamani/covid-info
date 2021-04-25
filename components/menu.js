@@ -47,7 +47,7 @@ export function SideMenu() {
       />
       <p className="italic text-sm">More services, coming soon!</p>
       <br />
-      <SingleList listData={['Yes', 'No']} label="Has Beds" filterKey="beds" />
+      {/* <SingleList listData={['Yes', 'No']} label="Has Beds" filterKey="beds" /> */}
       <br />
       <button
         onClick={() => {

@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css';
 import '../style.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { ToastProvider } from 'react-toast-notifications';
 import * as gtag from '../utils/gtrack';
 
 import { FilterProvider } from '../context/filter';
@@ -20,11 +21,13 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <SideMenuProvider>
-      <FilterProvider>
-        <Component {...pageProps} />
-      </FilterProvider>
-    </SideMenuProvider>
+    <ToastProvider>
+      <SideMenuProvider>
+        <FilterProvider>
+          <Component {...pageProps} />
+        </FilterProvider>
+      </SideMenuProvider>
+    </ToastProvider>
   );
 }
 

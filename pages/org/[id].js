@@ -23,7 +23,7 @@ export default function Home() {
         <SiteHeading />
       </div>
 
-      <div className="flex justify-around lg:max-w-4xl mt-6 mx-5  sm:w-full text-left border rounded-xl p-10 flex-col">
+      <div className="flex justify-around lg:max-w-4xl mt-6 mx-5  sm:w-full text-left border rounded-xl p-10 flex-col relative pb-20">
         <Link href="/">
           <span className="mr-5 mb-10 hover:text-blue-500 cursor-pointer">
             &larr; Back
