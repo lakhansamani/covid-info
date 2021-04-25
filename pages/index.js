@@ -6,11 +6,10 @@ import { SiteHeading } from '../components/siteHeading';
 export default function Home() {
   return (
     <Layout>
-      <div className="lg:hidden px-10 text-center">
-        <SiteHeading />
-      </div>
       <Search />
-      <Result />
+      <div className="mt-28 lg:mt-20">
+        <Result />
+      </div>
     </Layout>
   );
 }

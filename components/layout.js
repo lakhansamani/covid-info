@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { SideMenu } from './menu';
+
 export default function Layout({ children }) {
   return (
     <div>
@@ -10,7 +11,7 @@ export default function Layout({ children }) {
       </Head>
       <div className="flex">
         <SideMenu />
-        <div className="flex flex-col items-center  min-h-screen py-5 relative lg:ml-80 w-full sm:w-screen">
+        <div className="flex flex-col items-center  min-h-screen relative lg:ml-80 w-full sm:w-screen">
           {children}
           <div className="mb-40" />
 
