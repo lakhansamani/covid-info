@@ -112,8 +112,8 @@ export function ResultItem({ item, view }) {
                 text: getSharableText(item),
               });
             } else {
-              addToast(`This feature is not supported on your browser`, {
-                appearance: 'success',
+              addToast(`This feature is only supported on mobile browsers`, {
+                appearance: 'info',
                 autoDismiss: true,
               });
             }
