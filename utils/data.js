@@ -65,7 +65,7 @@ export const data = [
     id: 6,
     city: 'Vadodara',
     name: 'Dhiraj Hospital Waghodia',
-    category: '',
+    category: 'Private Hospital',
     contact: '02668 245262',
     address: 'Sumandeep Vidyapeeth, \nAT & PO: Pipaira, \nTa: Waghodia, 391750',
     google_map:
