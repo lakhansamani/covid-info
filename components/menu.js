@@ -19,7 +19,7 @@ export function SideMenu() {
   }
 
   return (
-    <div className="fixed lg:w-80 bg-gray-200 p-10 h-screen z-50 isolate sm:w-screen">
+    <div className="fixed lg:w-80 bg-gray-200 px-10 py-5 h-screen z-50 isolate sm:w-screen">
       <div className="lg:hidden flex justify-end mb-8">
         <FontAwesomeIcon
           icon={faTimes}
@@ -32,7 +32,7 @@ export function SideMenu() {
 
       <SiteHeading />
 
-      <div className="my-5 border-solid border border-gray-700" />
+      <div className="my-5 border-solid border border-gray-600" />
       <MultiList
         listData={uniq(data.map((i) => i.city))}
         label="Filter Cities"
