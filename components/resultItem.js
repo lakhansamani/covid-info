@@ -81,15 +81,6 @@ export function ResultItem({ item, view }) {
         <span className="p-1 rounded mr-1 bg-yellow-300 text-sm text-white">
           # {item.category}
         </span>
-        {item.is_available ? (
-          <span className="p-1 rounded mr-1 bg-green-400 text-sm text-white">
-            # Available
-          </span>
-        ) : (
-          <span className="p-1 rounded mr-1 bg-red-400 text-sm text-white">
-            # Not Available
-          </span>
-        )}
       </div>
 
       <div
