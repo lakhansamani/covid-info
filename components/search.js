@@ -22,12 +22,12 @@ export const Search = () => {
 
   return (
     <div className="fixed right-0 left-0 top-0  justify-center items-center sm:w-full bg-white shadow-md z-40">
-      <div class="lg:ml-80 px-5 lg:px-10 py-5">
+      <div className="lg:ml-80 px-5 lg:px-10 py-5">
         <div className="flex flex-nowrap">
           <input
             type="text"
             placeholder="Search name, address, phone number"
-            className="focus:outline-none focus:ring focus:border-blue-300 p-2 border border-blue-300 ring rounded w-full"
+            className="focus:outline-none focus:ring focus:border-blue-300 p-2 border border-gray-300 ring rounded w-full"
             value={currentSelectedFilters}
             onChange={handleChange}
           />

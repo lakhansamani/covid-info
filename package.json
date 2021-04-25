@@ -16,7 +16,9 @@
     "lodash": "^4.17.21",
     "next": "latest",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-copy-to-clipboard": "^5.0.3",
+    "react-dom": "^17.0.1",
+    "react-toast-notifications": "^2.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
