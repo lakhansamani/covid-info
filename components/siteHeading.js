@@ -3,9 +3,9 @@ import Link from 'next/link';
 export const SiteHeading = () => {
   return (
     <>
-      <span className="beta p-1 rounded mr-1 bg-red-500 text-sm text-white">
+      {/* <span className="beta p-1 rounded mr-1 bg-red-500 text-sm text-white">
         Beta
-      </span>
+      </span> */}
       <Link href="/">
         <h2 className="text-xl font-bold">COVID-19 </h2>
       </Link>
