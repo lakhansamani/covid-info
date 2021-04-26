@@ -31,9 +31,10 @@ export function ResultItem({ item, view }) {
         </h3>
       ) : (
         <Link href={`/org/${item.id}`}>
-          <h3 className="text-xl font-bold mb-2 hover:text-blue-500">
-            {item.name} &rarr;
-          </h3>
+          <h3
+            className="text-xl font-bold mb-2 hover:text-blue-500"
+            dangerouslySetInnerHTML={{ __html: item.name }}
+          />
         </Link>
       )}
       {get(item, 'contact') && (
@@ -50,7 +51,7 @@ export function ResultItem({ item, view }) {
             href={`tel:${item.contact}`}
             className="text-gray-600 hover:text-blue-500"
           >
-            {item.contact}
+            <span dangerouslySetInnerHTML={{ __html: item.contact }} />
             <span className="text-blue-500">&rarr;Call</span>
           </a>
         </div>
@@ -70,7 +71,7 @@ export function ResultItem({ item, view }) {
             href={get(item, 'google_map', '/')}
             target="_blank"
           >
-            {item.address}{' '}
+            <span dangerouslySetInnerHTML={{ __html: item.address }} />
             {get(item, 'google_map') && (
               <span className="text-blue-500">&rarr;Go to maps</span>
             )}

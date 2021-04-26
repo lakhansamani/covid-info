@@ -53,7 +53,7 @@ export const data = [
     city: 'Vadodara',
     name: 'Pioneer campus',
     category: 'Private Hospital',
-    contact: 8889243469,
+    contact: '8889243469',
     address:
       'Post Sayajipura, \nAjwa-Nimeta Road, \nN.H.No 8, Ajwa, \nVadodara, Gujarat 390019',
     google_map:
@@ -78,7 +78,7 @@ export const data = [
     city: 'Vadodara',
     name: 'Bhagi Laxmi Gases',
     category: 'Oxygen',
-    contact: 9898285037,
+    contact: '9898285037',
     address: '',
     google_map: '',
     is_verified: '',
@@ -89,7 +89,7 @@ export const data = [
     city: 'Vadodara',
     name: "Pearl Women's hospital",
     category: 'Oxygen',
-    contact: 9173518210,
+    contact: '9173518210',
     address: '',
     google_map: '',
     is_verified: '',
@@ -113,7 +113,7 @@ export const data = [
     city: 'Vadodara',
     name: 'Santram Medical Agency',
     category: 'Remdesivir',
-    contact: 9429136600,
+    contact: '9429136600',
     address: 'Patel Pen Lane, \nSiyapura, Raopura, \nVadodara - 390001',
     google_map:
       'https://www.google.com/maps/place/SANTRAM+MEDICAL+AGENCY/@22.303184,73.1979746,17z/data=!3m1!4b1!4m5!3m4!1s0x395fcf5f50000001:0xfd5d0561263c9b82!8m2!3d22.303184!4d73.2001633',
@@ -138,7 +138,7 @@ export const data = [
     city: 'Vadodara',
     name: 'Rhythm Heart Institute',
     category: 'Private Hospital',
-    contact: 9979841924,
+    contact: '9979841924',
     address:
       'Near Siddharth Bungalows, Sama-Savli Rd, Vadodara, Gujarat 390022',
     google_map:
@@ -151,7 +151,7 @@ export const data = [
     city: 'Vadodara',
     name: 'Sunshine Global Hospital',
     category: 'Private Hospital',
-    contact: 8469122777,
+    contact: '8469122777',
     address: 'Vadsar, Manjalpur, Vadodara, Gujarat 390011',
     google_map:
       'https://www.google.com/maps/place/Sunshine+Global+Hospital/@22.2514517,73.1706335,17z/data=!3m1!4b1!4m5!3m4!1s0x395fc7c0858ff429:0xbee1e1ae2dd30624!8m2!3d22.2514517!4d73.1728222',

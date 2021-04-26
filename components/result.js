@@ -1,7 +1,5 @@
-import { useContext, useRef } from 'react';
+import { useContext } from 'react';
 import { useRouter } from 'next/router';
-
-import Fuse from 'fuse.js';
 
 import { data } from '../utils/data';
 import { FilterContext } from '../context/filter';
@@ -10,14 +8,10 @@ import { ResultItem } from './resultItem';
 import { VIEW } from '../utils/constants';
 
 export const Result = () => {
-  const fuseInstance = useRef();
   const router = useRouter();
   const { filters } = useContext(FilterContext);
-  fuseInstance.current = new Fuse(data, {
-    keys: ['name', 'contact', 'address', 'city', 'category'],
-  });
 
-  const filteredData = filter(data, filters, fuseInstance.current);
+  const filteredData = filter(data, filters);
 
   if (hasFilter(filters) && !filteredData.length) {
     return (

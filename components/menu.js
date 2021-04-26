@@ -34,13 +34,6 @@ export function SideMenu() {
 
       <div className="my-5 border-solid border border-gray-600" />
       <MultiList
-        listData={uniq(data.map((i) => i.city))}
-        label="Filter Cities"
-        filterKey="cities"
-      />
-      <p className="italic text-sm">More cities, coming soon!</p>
-      <br />
-      <MultiList
         listData={uniq(data.map((i) => i.category))}
         label="Filter Services"
         filterKey="services"
