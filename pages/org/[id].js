@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import get from 'lodash/get';
 
 import Layout from '../../components/layout';
 import { data } from '../../utils/data';
@@ -11,7 +10,7 @@ import { VIEW } from '../../utils/constants';
 export default function Home() {
   const router = useRouter();
   const { id } = router.query;
-  const item = data.find((i) => i.id === id);
+  const item = data.find((i) => i.id === Number(id));
 
   if (!item) {
     return <h1> 404 Not found</h1>;
