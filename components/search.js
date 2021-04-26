@@ -52,7 +52,7 @@ export const Search = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex flex-nowrap lg:ml-5 items-center lg:w-3/12 mt-3 lg:mt-0 lg:flex-1">
+        <div className="flex flex-nowrap lg:ml-5 items-center lg:w-3/12 mt-3 lg:mt-0 flex-1">
           <Listbox value={filters.city} onChange={handleCityChange}>
             {({ open }) => (
               <>
@@ -130,7 +130,7 @@ export const Search = () => {
             onClick={() => {
               setIsSideMenuVisible(true);
             }}
-            className="ml-5 lg:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
+            className="ml-3 lg:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
           >
             <FontAwesomeIcon icon={faFilter} className="h-3 mr-2" />
             Filters
@@ -140,10 +140,10 @@ export const Search = () => {
               clearFilters();
             }}
             disabled={!hasFilter(filters)}
-            className="disabled:opacity-50 ml-5 bg-red-500 hover:bg-red-700 focus:outline-none text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
+            className="disabled:opacity-50 ml-2 bg-red-500 hover:bg-red-700 focus:outline-none text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
           >
             <FontAwesomeIcon icon={faTimes} className="h-3 mr-2" />
-            Clear Filters
+            Clear
           </button>
         </div>
       </div>
