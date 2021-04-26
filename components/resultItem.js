@@ -15,7 +15,7 @@ const getSharableText = (item) => {
   return `
 ${item.category}\n
 Name: ${get(item, 'name')}\n
-Phone: ${item.phone}\n
+${get(item, 'contact', '') ? `Phone: ${get(item, 'contact')}` : ''}\n
 ${get(item, 'address', '') ? `Address: ${get(item, 'address')}` : ''}\n
 ${get(item, 'google_map', '') ? `Map: ${get(item, 'google_map')}` : ''}\n`;
 };
