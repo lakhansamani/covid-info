@@ -1,16 +1,15 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
 
-import { data } from '../utils/data';
 import { FilterContext } from '../context/filter';
 import { filter, hasFilter } from '../utils/filterData';
 import { ResultItem } from './resultItem';
 import { VIEW } from '../utils/constants';
+import { DataContext } from '../context/data';
 
 export const Result = () => {
-  const router = useRouter();
   const { filters } = useContext(FilterContext);
-
+  const { data } = useContext(DataContext);
   const filteredData = filter(data, filters);
 
   if (hasFilter(filters) && !filteredData.length) {

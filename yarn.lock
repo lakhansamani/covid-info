@@ -1654,7 +1654,12 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next@latest:
+next-translate@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.0.6.tgz#746f4dc5504f00c31a0fd9a934b0fcea03430f59"
+  integrity sha512-CI/IIPLZVcilXP8XxLSfJ/jP8LQkrYBeiXMZvCYZDMvixwHMz8qAmvlcDsxvsfntrCSW15+QNFp10J8jSuwcAw==
+
+next@^10.1.3:
   version "10.1.3"
   resolved "https://registry.yarnpkg.com/next/-/next-10.1.3.tgz#e26e8371343a42bc2ba9be5cb253a7d324d03673"
   integrity sha512-8Jf38F+s0YcXXkJGF5iUxOqSmbHrey0fX5Epc43L0uwDKmN2jK9vhc2ihCwXC1pmu8d2m/8wfTiXRJKGti55yw==
@@ -2156,7 +2161,7 @@ react-copy-to-clipboard@^5.0.3:
     copy-to-clipboard "^3"
     prop-types "^15.5.8"
 
-react-dom@^17.0.1:
+react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -2193,7 +2198,7 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^17.0.1:
+react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==

@@ -7,6 +7,7 @@ import * as gtag from '../utils/gtrack';
 
 import { FilterProvider } from '../context/filter';
 import { SideMenuProvider } from '../context/sideMenu';
+import { DataProvider } from '../context/data';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -21,13 +22,15 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <ToastProvider>
-      <SideMenuProvider>
-        <FilterProvider>
-          <Component {...pageProps} />
-        </FilterProvider>
-      </SideMenuProvider>
-    </ToastProvider>
+    <DataProvider>
+      <ToastProvider>
+        <SideMenuProvider>
+          <FilterProvider>
+            <Component {...pageProps} />
+          </FilterProvider>
+        </SideMenuProvider>
+      </ToastProvider>
+    </DataProvider>
   );
 }
 

@@ -7,12 +7,15 @@ import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
 
 import { FilterContext } from '../context/filter';
 import { SideMenuContext } from '../context/sideMenu';
-import { data } from '../utils/data';
 import { hasFilter } from '../utils/filterData';
-
-const cities = uniq(data.map((i) => i.city));
+import { DataContext } from '../context/data';
+import useTranslation from 'next-translate/useTranslation';
+import { LanguageSwitch } from './languageSwitch';
 
 export const Search = () => {
+  const { data } = useContext(DataContext);
+  const cities = uniq(data.map((i) => i.city));
+  const { t } = useTranslation('common');
   const { filters, setFilters } = useContext(FilterContext);
   const { setIsSideMenuVisible } = useContext(SideMenuContext);
   const currentSelectedFilters = filters.search;
@@ -42,11 +45,18 @@ export const Search = () => {
 
   return (
     <div className="fixed right-0 left-0 top-0  justify-center items-center sm:w-full bg-white shadow-md z-40">
+      <div className="lg:hidden flex justify-center font-bold text-2xl">
+        {t('title')}
+      </div>
+      <div className="lg:hidden flex justify-center font-bold text-l">
+        {t('information_center')}
+      </div>
       <div className="px-5 py-5 flex flex-nowrap lg:flex-row lg:px-10 lg:ml-80 flex-col ">
         <div className="flex flex-nowrap flex-1">
+          <LanguageSwitch />
           <input
             type="text"
-            placeholder="Search name, address, phone number"
+            placeholder={t('search')}
             className="focus:outline-none focus:ring focus:border-blue-300 p-2 border border-gray-300 rounded w-full"
             value={currentSelectedFilters}
             onChange={handleChange}
@@ -61,7 +71,9 @@ export const Search = () => {
                     {filters.city ? (
                       <span className="block">{filters.city}</span>
                     ) : (
-                      <span className="block text-gray-400">Select a city</span>
+                      <span className="block text-gray-400">
+                        {t('select_city')}
+                      </span>
                     )}
                     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                       <SelectorIcon
@@ -126,6 +138,7 @@ export const Search = () => {
               </>
             )}
           </Listbox>
+
           <button
             onClick={() => {
               setIsSideMenuVisible(true);
@@ -133,7 +146,7 @@ export const Search = () => {
             className="ml-3 lg:hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
           >
             <FontAwesomeIcon icon={faFilter} className="h-3 mr-2" />
-            Filters
+            {t('filter')}
           </button>
           <button
             onClick={() => {
@@ -143,7 +156,7 @@ export const Search = () => {
             className="disabled:opacity-50 ml-2 bg-red-500 hover:bg-red-700 focus:outline-none text-white font-bold py-2 px-4 rounded flex flex-nowrap items-center"
           >
             <FontAwesomeIcon icon={faTimes} className="h-3 mr-2" />
-            Clear
+            {t('clear')}
           </button>
         </div>
       </div>

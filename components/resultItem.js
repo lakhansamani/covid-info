@@ -9,7 +9,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useToasts } from 'react-toast-notifications';
-import { VIEW } from '../utils/constants';
+import { CATEGORY_MAP, VIEW } from '../utils/constants';
+import useTranslation from 'next-translate/useTranslation';
 
 const getSharableText = (item) => {
   return `
@@ -21,6 +22,7 @@ ${get(item, 'google_map', '') ? `Map: ${get(item, 'google_map')}` : ''}\n`;
 };
 
 export function ResultItem({ item, view }) {
+  const { t } = useTranslation('common');
   const isDetail = view === VIEW.DETAIL;
   const { addToast } = useToasts();
   return (
@@ -52,14 +54,14 @@ export function ResultItem({ item, view }) {
             className="text-gray-600 hover:text-blue-500"
           >
             <span dangerouslySetInnerHTML={{ __html: item.contact }} />
-            <span className="text-blue-500">&rarr;Call</span>
+            <span className="text-blue-500">&rarr;{t('call')}</span>
           </a>
         </div>
       )}
       {get(item, 'address') && (
         <div className="my-3 flex items-start">
           {isDetail ? (
-            <b>Address:</b>
+            <b>{t('address')}:</b>
           ) : (
             <FontAwesomeIcon
               className="font-bold mr-2 h-4"
@@ -73,14 +75,14 @@ export function ResultItem({ item, view }) {
           >
             <span dangerouslySetInnerHTML={{ __html: item.address }} />
             {get(item, 'google_map') && (
-              <span className="text-blue-500">&rarr;Go to maps</span>
+              <span className="text-blue-500">&rarr;{t('go_to_maps')}</span>
             )}
           </a>
         </div>
       )}
       <div className="flex">
-        <span className="p-1 rounded mr-1 bg-yellow-300 text-sm text-white">
-          # {item.category}
+        <span className="p-1 rounded mr-1 bg-yellow-500 text-sm text-white">
+          # {t(get(CATEGORY_MAP, item.category))}
         </span>
       </div>
 
@@ -92,7 +94,7 @@ export function ResultItem({ item, view }) {
         <CopyToClipboard
           text={getSharableText(item)}
           onCopy={() =>
-            addToast(`Copied to Clipboard`, {
+            addToast(t('copied_to_clipboard'), {
               appearance: 'success',
               autoDismiss: true,
             })
@@ -100,7 +102,7 @@ export function ResultItem({ item, view }) {
         >
           <button className="bg-blue-500 hover:bg-blue-700 text-white text-xs py-2 px-4 rounded flex flex-nowrap items-center">
             <FontAwesomeIcon icon={faCopy} className="h-2 mr-2" />
-            Copy
+            {t('copy')}
           </button>
         </CopyToClipboard>
         <button
@@ -113,7 +115,7 @@ export function ResultItem({ item, view }) {
                 text: getSharableText(item),
               });
             } else {
-              addToast(`This feature is only supported on mobile browsers`, {
+              addToast(t('mobile_only_feature'), {
                 appearance: 'info',
                 autoDismiss: true,
               });
@@ -121,7 +123,7 @@ export function ResultItem({ item, view }) {
           }}
         >
           <FontAwesomeIcon icon={faShare} className="h-2 mr-2" />
-          Share
+          {t('share')}
         </button>
       </div>
     </>
