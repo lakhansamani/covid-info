@@ -6,11 +6,13 @@ import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
 export const LanguageSwitch = () => {
   const router = useRouter();
   const { locale, locales } = router;
+
   const handleCityChange = (newLocale) => {
     if (locale !== newLocale) {
-      router.replace(`/${newLocale}`);
+      window.location.href = `/${newLocale}`;
     }
   };
+
   return (
     <div className="mr-2">
       <Listbox value={locale} onChange={handleCityChange}>
