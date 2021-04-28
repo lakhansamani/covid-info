@@ -7,10 +7,8 @@ export const LanguageSwitch = () => {
   const router = useRouter();
   const { locale, locales } = router;
   const handleCityChange = (newLocale) => {
-    console.log({ newLocale });
     if (locale !== newLocale) {
-      console.log(`here`);
-      router.push(`/${newLocale}`);
+      router.replace(`/${newLocale}`);
     }
   };
   return (
