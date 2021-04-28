@@ -45,7 +45,7 @@ export const Search = () => {
 
   return (
     <div className="fixed right-0 left-0 top-0  justify-center items-center sm:w-full bg-white shadow-md z-40">
-      <div className="lg:hidden flex justify-center font-bold text-2xl">
+      <div className="lg:hidden pt-2 flex justify-center font-bold text-2xl">
         {t('title')}
       </div>
       <div className="lg:hidden flex justify-center font-bold text-l">
