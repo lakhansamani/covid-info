@@ -42,7 +42,7 @@ export function ResultItem({ item, view }) {
       {get(item, 'contact') && (
         <div className="my-3 flex items-center">
           {isDetail ? (
-            <b>Phone:</b>
+            <b>{t('phone')}:</b>
           ) : (
             <FontAwesomeIcon
               className="font-bold mr-2 h-4"
